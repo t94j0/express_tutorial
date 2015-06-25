@@ -1,0 +1,14 @@
+extends ./layout.jade
+block content
+        //- The pattern properties are validation
+        form(id="signup", method='POST', action="/signup")
+            lable(for='name') Name: 
+            input#name(type='text', name='name', pattern="^[a-zA-Z]{1,32}$", class='form-control')
+            br
+            lable(for='username') User Name: 
+            input#username(type='text', name='username', pattern="^[a-zA-Z0-9_]{5,32}$", class='form-control')
+            br
+            lable(for='password') Password: 
+            input#password(type='password', name='password', pattern="^[a-zA-Z0-9*-_]{8,32}$" ,class='form-control')
+            br
+            input(type='submit', value='Sign Up' class='btn btn-success')

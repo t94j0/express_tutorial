@@ -1,0 +1,10 @@
+extends ./layout.jade
+block content
+    if user !== null
+        h1 Hello #{user.name}
+        p Your hash is #{user.hash}
+    else
+        h1 Hello
+        p Would you like to 
+            a(href='/signup')
+                |   sign up?

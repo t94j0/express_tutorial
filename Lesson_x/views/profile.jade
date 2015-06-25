@@ -1,0 +1,13 @@
+extends ./layout.jade
+block content
+    h1 #{user.name}'s Profile
+    h3 Reset Password
+    form(method='POST', action='/resetpassword')
+        lable(for='oldpassword') Old Password: 
+        input#oldpassword(type='password', name='oldpassword')
+        br
+        lable(for='newpassword') New Password: 
+        input#newpassword(type='password', name='newpassword')
+        br
+        input(type='submit', value='Submit')
+

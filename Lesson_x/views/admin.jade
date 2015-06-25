@@ -1,0 +1,8 @@
+extends ./layout.jade
+if user.username == 'admin'
+    block content
+        h3 Kill Users
+        form(id='deleteUser', method='POST', action='/deleteuser')
+            each acc in accounts
+                input(name='username', type='submit', value=acc.username)
+                br
